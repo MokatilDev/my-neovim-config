@@ -12,6 +12,7 @@ local servers = {
   "gopls",
   "clangd",
   "ts_ls",
+  "prismals",
 }
 vim.lsp.enable(servers)
 
