@@ -57,6 +57,12 @@ vim.lsp.config.tailwindcss = {
   },
 }
 
+vim.lsp.config.lua_ls = {
+  filetypes = {
+    "lua",
+  },
+}
+
 vim.lsp.config.cssls = {
   settings = {
     css = {
