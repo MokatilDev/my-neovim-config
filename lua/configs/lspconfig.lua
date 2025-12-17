@@ -23,6 +23,12 @@ vim.lsp.config.gopls = {
   },
 }
 
+vim.lsp.config.prismals = {
+  filetypes = {
+    "prisma",
+  },
+}
+
 vim.lsp.config.emmet_ls = {
   filetypes = {
     "css",

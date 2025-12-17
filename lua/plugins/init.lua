@@ -1,29 +1,5 @@
 return {
-  {
-    "pmizio/typescript-tools.nvim",
-    event = "LspAttach",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "neovim/nvim-lspconfig",
-      {
-        "saghen/blink.cmp",
-        lazy = false,
-        priority = 1000,
-      },
-    },
-  },
-
-  {
-    "axelvc/template-string.nvim",
-    event = "InsertEnter",
-    ft = {
-      "javascript",
-      "typescript",
-      "javascriptreact",
-      "typescriptreact",
-    },
-    config = true,
-  },
+  "nvzone/volt",
 
   {
     "dmmulroy/tsc.nvim",
@@ -35,33 +11,7 @@ return {
     "dmmulroy/ts-error-translator.nvim",
     config = true,
   },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup {
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript" },
-        sync_install = false,
-        auto_install = true,
-        highlight = {
-          enable = true,
-          additional_vim_regex_highlighting = false,
-        },
 
-        autotag = {
-          enable = true,
-        },
-      }
-    end,
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = {
-      view = {
-        width = 35,
-      },
-    },
-    enabled = false,
-  },
   {
     "pcolladosoto/tinygo.nvim",
     opts = {},
@@ -84,13 +34,6 @@ return {
     end,
   },
 
-  "nvzone/volt",
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre",
@@ -108,18 +51,6 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
-  },
-
-  {
-    "lervag/vimtex",
-    lazy = false,
-    init = function()
-      vim.g.vimtex_view_method = "zathura"
-    end,
-  },
-  {
-    "mattn/emmet-vim",
-    ft = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact" },
   },
 
   {
